@@ -4,6 +4,7 @@ import {
   GiPerspectiveDiceSixFacesRandom,
   GiFastBackwardButton,
 } from 'react-icons/gi';
+import background from './assets/blob.svg';
 
 const App = () => {
   const [quotes, setQuotes] = useState('');
@@ -38,7 +39,7 @@ const App = () => {
   console.log('prev:', prevQuote);
 
   return (
-    <div className='App'>
+    <div className='App' style={{ backgroundImage: `url(${background})` }}>
       <div className='container'>
         <header className='header'>
           <h1>

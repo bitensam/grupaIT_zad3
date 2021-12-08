@@ -1,10 +1,9 @@
 @import url('https://fonts.googleapis.com/css2?family=Brygada+1918:ital@1&family=Lato:wght@300;700&display=swap');
 
 // setttings
-$color-bg-dark: #14274e;
-$color-bg-semi: #394867;
-$color-txt-dark: #9ba4b4;
-$color-txt-light: #f1f6f9;
+$color-dark: #14274e;
+$color-txt-light: #9ba4b4;
+$color-light: #f1f6f9;
 $color-contrast: #9a0680;
 
 $font-primary: 'Lato', sans-serif;
@@ -19,8 +18,8 @@ $transition: all 0.3s ease-out;
 
 body {
   font-size: $base-size;
-  background-color: $color-bg-semi;
-  color: $color-txt-light;
+  background-color: $color-light;
+  color: $color-dark;
   box-sizing: border-box;
 }
 
@@ -32,9 +31,9 @@ main {
 }
 
 button {
-  color: $color-txt-light;
-  background-color: transparent;
-  border: 1px solid $color-txt-light;
+  color: $color-dark;
+  background-color: $color-light;
+  border: 1px solid $color-dark;
   border-radius: $radius;
   transition: $transition;
   font-family: $font-primary;
@@ -50,7 +49,13 @@ button {
   svg {
     font-size: 1.5rem;
     margin-left: 0.5rem;
+    color: $color-contrast;
   }
+}
+
+.App {
+  background-repeat: no-repeat;
+  background-position: center right;
 }
 
 .container {
@@ -72,12 +77,13 @@ button {
   letter-spacing: 0.75rem;
 
   span {
-    background-color: $color-contrast;
+    color: $color-contrast;
   }
 }
 
 .card {
-  background-color: $color-bg-dark;
+  background-color: $color-light;
+  border: 1px solid $color-dark;
   border-radius: $radius;
   padding: 2rem 1rem 0.5rem;
   box-sizing: border-box;
@@ -105,7 +111,7 @@ button {
   font-family: $font-primary;
   font-size: 1rem;
   font-weight: $font300;
-  color: $color-txt-dark;
+  color: $color-dark;
   text-decoration: $color-contrast dashed underline;
   text-underline-offset: 0.5rem;
   text-align: right;
@@ -124,4 +130,16 @@ button {
   display: flex;
   justify-content: center;
   align-items: flex-end;
+}
+
+@media screen and (max-width: 375px) {
+  .header {
+    font-size: 1rem;
+  }
+  .button-box {
+    width: 100%;
+  }
+  .card {
+    width: 100%;
+  }
 }
