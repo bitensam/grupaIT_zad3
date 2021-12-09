@@ -35,9 +35,6 @@ const App = () => {
 
   const prevQuote = prevQuoteRef.current;
 
-  console.log('current:', quotes);
-  console.log('prev:', prevQuote);
-
   return (
     <div className='App' style={{ backgroundImage: `url(${background})` }}>
       <div className='container'>
